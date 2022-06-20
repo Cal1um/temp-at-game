@@ -1,6 +1,6 @@
 import Player from "/player.js";
-import InputHandler from "/input.js"
-
+import InputHandler from "/input.js";
+import Object from "/object.js";
 
 let canvas = document.getElementById('gameScreen');
 let ctx = canvas.getContext('2d');
@@ -13,7 +13,8 @@ const GAME_HEIGHT = 600;
 
 let player = new Player(GAME_WIDTH, GAME_HEIGHT);
 
-new InputHandler(player)
+let object = new Object(GAME_WIDTH, GAME_HEIGHT, player);
+new InputHandler(player);
 
 
 let LastTime = 0;
@@ -26,6 +27,10 @@ function gameLoop(TimeStamp) {
 
     player.update(deltaTime);
     player.draw(ctx);
+
+    object.update(deltaTime);
+    object.draw(ctx);
+    
 
     requestAnimationFrame(gameLoop);
 }

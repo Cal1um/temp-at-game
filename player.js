@@ -7,13 +7,14 @@ export default class Player{
         this.gameWidth = gameWidth;
 
         this.maxspeed = {
-            x: 6,
-            y: 6
+            x: 5,
+            y: 5
         };
         this.speed = {
             x: 0,
             y: 0,
         }
+        
  
 
 
@@ -42,6 +43,8 @@ export default class Player{
     stopy(){
         this.speed.y = 0;
     }
+   
+ 
 
     draw(ctx){
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
