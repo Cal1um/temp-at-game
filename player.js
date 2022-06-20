@@ -7,8 +7,8 @@ export default class Player{
         this.gameWidth = gameWidth;
 
         this.maxspeed = {
-            x: 5,
-            y: 5
+            x: 6,
+            y: 6
         };
         this.speed = {
             x: 0,
