@@ -2,6 +2,8 @@ export default class InputHandler {
     constructor(player) {
         document.addEventListener('keydown', event => {
             switch (event.keyCode){
+
+                
                 case 37:
                     player.moveleft();
                     break;
@@ -16,6 +18,8 @@ export default class InputHandler {
                 case 40:
                     player.movedown();
                     break;
+                
+                
             }
 
             
